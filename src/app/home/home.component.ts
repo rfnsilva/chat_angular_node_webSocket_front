@@ -98,6 +98,7 @@ export class HomeComponent implements OnInit {
     
     this.http.get(`${this.apiURL}/grupos`, { 'headers': headers })
       .subscribe(result => {
+        console.log(result)
         this.grupos = result;
       });
     
@@ -118,7 +119,9 @@ export class HomeComponent implements OnInit {
     this.http.get(`${this.apiURL}/grupo/${id}`, { 'headers': headers })
      .subscribe(result => {
        this.grupo = result;
+       console.log(result)
        this.mensagens = this.grupo.mensagens
+       console.log(this.mensagens)
      });
     
   }
@@ -145,6 +148,7 @@ export class HomeComponent implements OnInit {
       this.http.post(`${this.apiURL}/add_mensagem`, prototipo_mensagem, { 'headers': headers })
         .subscribe(result => {
           this.grupo = result;
+          console.log(this.grupo)
           this.geraHTML(prototipo_mensagem);
         });
     } else {
