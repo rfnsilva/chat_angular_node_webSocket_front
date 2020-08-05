@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { WebsocketService } from './websocket.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,7 @@ import { WebsocketService } from './websocket.service';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [WebsocketService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

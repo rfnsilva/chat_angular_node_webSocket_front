@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   readonly apiURL : string;
   public rota: Router;
 
-  constructor(private http : HttpClient, private r: Router, private socket: WebsocketService){
+  constructor(private http : HttpClient, private r: Router){
     this.apiURL = 'https://chat-angular-nodets.herokuapp.com';
     this.rota = r;
   }
