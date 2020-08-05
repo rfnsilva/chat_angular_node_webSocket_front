@@ -4,7 +4,6 @@ import { FormGroup, FormControl } from '@angular/forms';
 
 import * as io from 'socket.io-client';
 import * as $ from 'jquery';
-import { WebsocketService } from '../websocket.service';
 
 const api_url = 'https://chat-angular-nodets.herokuapp.com'
 
@@ -71,7 +70,7 @@ export class HomeComponent implements OnInit {
   }
 
   setupSocketConnection() {
-    this.socket = io(api_url);
+    this.socket = io('https://chat-angular-nodets.herokuapp.com/home');
 
     this.socket.on('message-broadcast', (data: any) => {
       if (data) {
