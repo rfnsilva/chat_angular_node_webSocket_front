@@ -1,0 +1,46 @@
+<div class="principal">
+    <header>
+      <h4 style="margin-top: 8px;">{{ user_email }}</h4>
+    </header>
+
+    <ng-template [ngIf]="verifica_grupo" [ngIfElse]="else_verifica_grupo">
+      <main id="repetir" class="style-2">
+        <div class="row remove" *ngFor="let m of mensagens">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{m.createdAt}}</h5>
+              <p class="card-text" style="float: right">{{ m?.autor }}</p>
+            </div>
+            <p>{{ m?.mensagem }}</p>
+          </div>
+        </div>
+        <div class="force-overflow"></div>
+      </main>
+    </ng-template>
+
+    <ng-template #else_verifica_grupo>
+      <div id="asd"><h1>SELECIONE UM GRUPO</h1></div>
+    </ng-template>
+
+    <aside>
+      <div class="row" *ngFor="let grupo of grupos">
+        <div class="card">
+          <div class="card-body">
+            <button (click)="getMessageGrupo(grupo?.id)" class="card-title">{{ grupo?.nome }}</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <ng-template [ngIf]="verifica_grupo">
+      <footer>
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <input formControlName="mensagem_enviar" type="text" class="form-control" id="exampleInputPassword1" placeholder="mensagem">
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </footer>
+    </ng-template>
+</div>
+    

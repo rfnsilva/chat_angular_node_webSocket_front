@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form class="box" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                    <h1>Register</h1>
+
+                    <input formControlName="nome" type="text" name="" placeholder="nome"> 
+                    <input formControlName="email" type="text" name="" placeholder="email"> 
+                    <input formControlName="password" type="password" name="" placeholder="senha">
+
+                    <input type="submit" name="" value="Register">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

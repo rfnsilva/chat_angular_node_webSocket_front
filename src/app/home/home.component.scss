@@ -1,0 +1,238 @@
+.principal {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 6vh 74vh 20vh;
+
+    grid-template-areas: 
+        "h h" 
+        "m a" 
+        "f a"
+    ;
+}
+
+header{
+    background-color: #202225;
+    height: 100%;
+    z-index: 5;
+
+    grid-area: h;
+}
+
+footer{
+    background-color: #212B38;
+    height: 100%;
+
+    grid-area: f;
+}
+
+aside{
+    background-color: #36393f;
+    height: 100%;
+    z-index: 5;
+
+    grid-area: a;
+}
+
+main{
+    background-color: #000000;
+    height: 100%;
+
+    grid-area: m;
+
+    overflow-y: scroll;
+}
+
+p{
+    margin: 0;
+    color: #8e8e8d;
+}
+
+.remove {
+    margin-bottom: 6px !important;
+}
+
+.row{
+    margin: 0;
+
+}
+.card{
+    width: 100%;
+    background-color: #36393f;
+    padding: 0 8px;
+}
+.card:hover{
+    background-color: #4b4f57;
+}
+
+aside .row {
+    margin: 0;
+    border-bottom: 1px solid #202225;
+}
+
+.card-body{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    color: #fff;
+}
+.card-body p{
+    color: #fff;
+}
+
+.card-body button{
+    width: 100%;
+    height: 39px;
+    background-color: #36393f;
+    border: none;
+    color: #fff;
+
+    cursor: pointer;
+}
+.card-body button:hover{
+    width: 100%;
+    height: 39px;
+    background-color: #40444b;
+    border: none;
+
+    cursor: pointer;
+}
+.card-title{
+    font-size: 0.83rem;
+    margin: 0;
+    padding-top: 4px;
+}
+.card-text{
+    font-size: 1rem;
+}
+#username{
+    margin-left: 50px;
+}
+
+.form-group{
+    margin: 0;
+    height: 70%;
+}
+.form-control{
+    height: 100%;
+    width: 100%;
+    background-color: #c2bee7;
+    color: #000;
+}
+.form-control:focus{
+    background-color: #eef5e2;
+    color: #000;
+}
+
+footer .btn {
+    width: 100%;
+    height: 30%;
+    background-color: #7159c1;
+    border: none;
+    cursor: pointer;
+}
+footer .btn:hover {
+    width: 100%;
+    background-color: #816acc;
+    border: none;
+}
+
+
+
+footer form {
+    height: 100%;
+}
+
+
+
+
+.style-2::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #727070;
+}
+
+.style-2::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #727070;
+}
+
+.style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #816acc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+@mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
+    &:after {
+      position: absolute;
+      content: "";
+      top: $y;
+      left: $x;
+      right: 0;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+      transform: scale($size);
+      -webkit-filter: blur($spread);
+      -moz-filter: blur($spread);
+      -ms-filter: blur($spread);
+      filter: blur($spread);
+      background: linear-gradient(270deg, $colorA, $colorB);
+      background-size: 200% 200%;
+      animation: animateGlow $duration ease infinite;
+      
+      @keyframes animateGlow {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+      }
+    }
+  }
+  
+  #asd {
+    position: relative;
+    width: 100%;
+    height: 94vh;
+    line-height: 30vw;
+    text-align: center;
+    color: #252B37;
+    background-color: #151823;
+    
+  }
+  #asd h1{
+    animation: textColor 10s ease infinite;
+    @include backlight(0, 5vw, 5vw, 0.75, #0fffc1, #7e0fff, 10s);
+      
+    @keyframes textColor {
+      0% {
+        color: #7e0fff;
+      }
+      50% {
+        color: #0fffc1;
+      }
+      100% {
+        color: #7e0fff;
+      }
+    }
+  }
