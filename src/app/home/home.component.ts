@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
   public socket;
 
   constructor(private http : HttpClient){
-    this.apiURL = 'http://localhost:3333';
+    this.apiURL = 'https://chat-angular-nodets.herokuapp.com';
   }
 
   geraHTML(data: any) {
@@ -98,7 +98,6 @@ export class HomeComponent implements OnInit {
     
     this.http.get(`${this.apiURL}/grupos`, { 'headers': headers })
       .subscribe(result => {
-        console.log(result)
         this.grupos = result;
       });
     
@@ -149,7 +148,7 @@ export class HomeComponent implements OnInit {
           this.geraHTML(prototipo_mensagem);
         });
     } else {
-      console.log('texto vazio')
+      console.log('texto vazio vacilao')
     }
   }
 
