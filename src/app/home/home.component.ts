@@ -5,7 +5,6 @@ import { FormGroup, FormControl } from '@angular/forms';
 import * as io from 'socket.io-client';
 import * as $ from 'jquery';
 
-const api_url = 'https://chat-angular-nodets.herokuapp.com'
 
 @Component({
   selector: 'app-home',
@@ -136,6 +135,8 @@ export class HomeComponent implements OnInit {
         userName: `${user_data.nome}`
       }
 
+      console.log(mensagem)
+      console.log(user_data.token)
 
       this.socket.emit('new-message', prototipo_mensagem)
 
