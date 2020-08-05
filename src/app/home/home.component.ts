@@ -98,6 +98,7 @@ export class HomeComponent implements OnInit {
     
     this.http.get(`${this.apiURL}/grupos`, { 'headers': headers })
       .subscribe(result => {
+        console.log(result)
         this.grupos = result;
       });
     
