@@ -3,7 +3,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
 
-import { WebsocketService } from '../websocket.service';
 
 @Component({
   selector: 'app-login',
