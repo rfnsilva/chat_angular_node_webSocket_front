@@ -16,7 +16,7 @@
 </p>
 <h4 align="center"> basta executar no terminal ng build </h4><br />
 
-<h2 align="center"><span>IMAGENS</span> </h2>
+<h2 align="center"><span>Preview</span> </h2>
 <p align="center"> 
 <img width="600" height="400" src="https://media.giphy.com/media/m9ulSClZaVfXIJ5AiE/giphy.gif"/>
 </p><br />
