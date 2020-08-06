@@ -1,27 +1,22 @@
-# Frontend
+<h1 align="center"> Chat real time </h1>
+<h4 align="center"> Projeto com foco no uso de socket.io para criação de chat </h4><br />
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+<h2 align="center"> Tecnologias usadas <span>FRONT-END</span> </h2>
+<h4 align="center"> Angular 2+, HTML5, CSS3/SCSS, JWT, Bcrypt </h4><br />
 
-## Development server
+<h2 align="center"> Como testar </h2>
+<h4 align="center">Primeiro rode npm install para instalar as dependencias</h4><br />
+<p align="center">
+<img src="https://img.shields.io/static/v1?label=angular&message=SERVE&color=red&style=for-the-badge&logo=ANGULAR"/>
+</p>
+<h4 align="center"> basta executar no terminal ng server e acessar o localost:4200 </h4><br />
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<p align="center">
+<img src="https://img.shields.io/static/v1?label=angular&message=BUILD&color=red&style=for-the-badge&logo=ANGULAR"/>
+</p>
+<h4 align="center"> basta executar no terminal ng build </h4><br />
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<h2 align="center"><span>IMAGENS</span> </h2>
+<p align="center"> 
+<img width="600" height="400" src="https://media.giphy.com/media/m9ulSClZaVfXIJ5AiE/giphy.gif"/>
+</p><br />
